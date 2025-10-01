@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kuis/data/food_list.dart';
 import 'package:kuis/pages/detail.dart';
+import 'package:kuis/pages/login.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key, required this.username});
@@ -19,7 +20,20 @@ class _HomeState extends State<Home> {
         title: Text("Home"), 
         centerTitle: true,
         actions: [
-
+          IconButton(
+            onPressed: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Login();
+                  },
+                ),
+                (route) => false,
+              );
+            },
+            icon: Icon(Icons.logout_outlined, color: Colors.red),
+          ),
         ],      
       ),
       body: Column(

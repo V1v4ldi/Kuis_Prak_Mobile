@@ -66,7 +66,6 @@ class Detail extends StatelessWidget {
                 },
               ),
               TextFormField(
-                obscureText: true,
                 enabled: true,
                 controller: inputValueC,
                 decoration: InputDecoration(labelText: "Input Jumlah Pesanan"),
@@ -75,6 +74,7 @@ class Detail extends StatelessWidget {
                   FilteringTextInputFormatter.digitsOnly,
                 ],
               ),
+              Text("Sub Total: ")
             ],
           ),
         ),
