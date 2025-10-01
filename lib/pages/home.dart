@@ -70,6 +70,7 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(dummyFoods[index].name),
+                  Text("Calories: ${dummyFoods[index].calories}"),
                   Text(dummyFoods[index].category),
                   ElevatedButton(
                     onPressed: () {
